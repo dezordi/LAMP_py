@@ -152,22 +152,25 @@ if __name__ == '__main__':
             if (y.find(x) != -1): # avoid running a blastn with a genoma and it's kmer file
                 continue
             else:
-                runblastn(i,x) # running blastn with i as query (kmer file) and x as database (genome file)
-                with open(y,'r') as input_list, open(y+'.blastn','r') as blast_out: #creates a read file for blast output
-                    lines = input_list.readlines() # read lines of kmer file
-                    all_blast_lines = blast_out.read() # read lines of blast output
-                    no_match = [] # creates a list of no-matched sequences
-                    for line in lines: # read each line of query file
-                        if ">" in line: # for each header in query file
-                            a = line.replace('>','').rstrip('\n') # remove '>' and '\n' for comparrisons against blast output file
-                            if (all_blast_lines.find(a)) != -1: # if header of query file exist in blast output, nothing occours
-                                pass
-                            else: # else, append header name in 'no_match' list
-                                no_match.append(a)
-                    if temp_remove == True:
-                        os.remove(i+'.blastn')
-                    input_list.close() # close query file
-                    blast_out.close() # close blast output
+                if os.path.getsize(i) ==0: # this line avoid blasts with empty query files.
+                    continue
+                else:
+                    runblastn(i,x) # running blastn with i as query (kmer file) and x as database (genome file)
+                    with open(y,'r') as input_list, open(y+'.blastn','r') as blast_out: #creates a read file for blast output
+                        lines = input_list.readlines() # read lines of kmer file
+                        all_blast_lines = blast_out.read() # read lines of blast output
+                        no_match = [] # creates a list of no-matched sequences
+                        for line in lines: # read each line of query file
+                            if ">" in line: # for each header in query file
+                                a = line.replace('>','').rstrip('\n') # remove '>' and '\n' for comparrisons against blast output file
+                                if (all_blast_lines.find(a)) != -1: # if header of query file exist in blast output, nothing occours
+                                    pass
+                                else: # else, append header name in 'no_match' list
+                                    no_match.append(a)
+                        if temp_remove == True:
+                            os.remove(i+'.blastn')
+                        input_list.close() # close query file
+                        blast_out.close() # close blast output
             if var_range == 1: # if is this the first iteration of blast, maintain, just add the number 1 on file name
                 with open(i) as seqs, open(y+str(var_range), 'w') as result: # open query file and an output file named 'result'
                     record_dict = SeqIO.to_dict(SeqIO.parse(seqs, 'fasta')) # creates a dictionary with sequences of query file
@@ -236,7 +239,8 @@ if __name__ == '__main__':
                     var_range += 1
         b = re.sub(r'.kmers.*','.uniq',i) # write output with uniq sequences
         os.rename(i,b)
-        uniq_list.append(b)
+        if os.path.getsize(b) != 0: # this line avoid to make glapd analysis with empty files...
+            uniq_list.append(b)
         y = ''
     print('='*120)
     print('Finished.\nResults with unique regions for each genome are present in *.uniq files')
@@ -263,4 +267,3 @@ if __name__ == '__main__':
         print('='*120)
         print('Finished.\nResults with lamp primers each genome are present in *_lamp_primers.txt files')
         print('='*120)
-
