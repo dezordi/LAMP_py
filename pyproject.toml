@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "lamppy"
-version = "1.0.0a0"
+dynamic = ["version"]
 description = "Genome-scale design of group-specific LAMP primer sets"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -12,7 +12,7 @@ license = { text = "MIT" }
 authors = [{ name = "Filipe Dezordi" }]
 keywords = ["LAMP", "primer design", "bioinformatics", "diagnostics"]
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
     "Intended Audience :: Science/Research",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
@@ -44,8 +44,21 @@ Issues = "https://github.com/dezordi/LAMPpy/issues"
 [project.scripts]
 lamppy = "lamppy.cli:main"
 
+[tool.hatch.version]
+path = "src/lamppy/__init__.py"
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/lamppy"]
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "/.github",
+    "/.readthedocs.yaml",
+    "/CLAUDE.md",
+    "/Dockerfile",
+    "/docs/images",
+    "/legacy",
+]
 
 [tool.black]
 line-length = 88

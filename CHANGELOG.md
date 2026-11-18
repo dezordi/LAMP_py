@@ -6,6 +6,8 @@ All notable changes to LAMPpy are recorded here, following
 
 ## [Unreleased]
 
+## [1.0.0b1] - 2026-11-18
+
 ### Added
 
 - `lamppy kmers`: canonical k-mer counting with a spectrum, a pairwise sharing matrix with
@@ -60,3 +62,6 @@ All notable changes to LAMPpy are recorded here, following
   argument errors on standard output, `LAMP` ignoring `-dir` for `-out`, and `Single`
   producing candidates for one stage only.
 - Inputs are never modified and never concatenated across assembly gaps.
+
+[Unreleased]: https://github.com/dezordi/LAMPpy/compare/v1.0.0b1...HEAD
+[1.0.0b1]: https://github.com/dezordi/LAMPpy/releases/tag/v1.0.0b1
