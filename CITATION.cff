@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: "LAMPpy: genome-scale design of group-specific LAMP primer sets"
+message: "If you use LAMPpy, please cite it and the tools it delegates to."
+type: software
+authors:
+  - family-names: Dezordi
+    given-names: Filipe
+license: MIT
+repository-code: "https://github.com/dezordi/LAMP_py"
+keywords:
+  - LAMP
+  - primer design
+  - bioinformatics
+  - molecular diagnostics
+references:
+  - type: article
+    title: "GLAPD: Whole Genome Based LAMP Primer Design for a Set of Target Genomes"
+    authors:
+      - family-names: Jia
+        given-names: Bin
+    journal: "Frontiers in Microbiology"
+    year: 2019
+    doi: 10.3389/fmicb.2019.02860
+  - type: article
+    title: "Primer3-py: a Python interface to Primer3"
+    authors:
+      - family-names: Untergasser
+        given-names: Andreas
+    journal: "Nucleic Acids Research"
+    year: 2012
+    doi: 10.1093/nar/gks596
