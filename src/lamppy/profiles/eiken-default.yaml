@@ -1,0 +1,74 @@
+name: eiken-default
+description: >
+  Default LAMP design criteria. Every parameter carries its provenance in the
+  sources block; parameters marked unconfirmed are LAMPpy defaults that have not
+  been traced to a primary source and are expected to change before 1.0.
+parameters:
+  tm:
+    F1c: [64.0, 66.0]
+    B1c: [64.0, 66.0]
+    F2: [59.0, 61.0]
+    B2: [59.0, 61.0]
+    F3: [59.0, 61.0]
+    B3: [59.0, 61.0]
+    LF: [64.0, 66.0]
+    LB: [64.0, 66.0]
+  tm_offset:
+    ideal: 5.0
+    minimum: 3.0
+  end_stability_dg: -4.0
+  hairpin_dg: -2.0
+  dimer_dg: -8.0
+  gc: [0.40, 0.65]
+  length:
+    F3: [17, 22]
+    B3: [17, 22]
+    F2: [17, 22]
+    B2: [17, 22]
+    F1c: [18, 25]
+    B1c: [18, 25]
+  geometry:
+    f3_f2_gap: [0, 25]
+    f2_f1c: [40, 90]
+    f1c_b1c_gap: [0, 40]
+    b1c_b2: [40, 90]
+    b2_b3_gap: [0, 25]
+    amplicon: [160, 280]
+  weights:
+    tm: 1.0
+    tm_offset: 1.0
+    end_stability: 1.0
+    hairpin: 1.0
+    dimer: 1.0
+    end_dimer: 2.0
+    gc: 10.0
+    conservation: 20.0
+sources:
+  tm: >
+    PrimerExplorer V5 manual, Eiken Chemical: F1c/B1c and LF/LB 64-66 C,
+    F2/B2/F3/B3 59-61 C.
+  tm_offset: >
+    PrimerExplorer V5 manual, Eiken Chemical: about 5 C between F2 and F1c
+    (and B2/B1c), F1c/B1c higher to favour loop formation; at least 3 C is
+    acceptable under less stringent conditions.
+  end_stability_dg: >
+    PrimerExplorer V5 manual, Eiken Chemical: dG at or below -4 kcal/mol at the
+    3' ends of F2/B2, F3/B3 and LF/LB and at the 5' ends of F1c/B1c.
+  hairpin_dg: unconfirmed - LAMPpy default, pending a primary source.
+  dimer_dg: unconfirmed - LAMPpy default, pending a primary source.
+  gc: unconfirmed - LAMPpy default, pending a primary source.
+  length: >
+    The length range observed over 29 sets designed by GLAPD: 18-21 for F3,
+    18-25 for F2, 20-25 for F1c and B1c, 18-23 for B2 and B3.
+  geometry: >
+    Calibrated against 29 sets designed by GLAPD, whose own criteria are
+    compiled in and unpublished, because the corresponding windows could not be
+    confirmed in Eiken's documentation. Measured over those sets, in plus-strand
+    coordinates of the target: f3_f2_gap 0-20, f2_f1c 61-83, f1c_b1c_gap 0-35,
+    b1c_b2 61-86, amplicon 168-230. The windows here are those ranges widened to
+    also admit the 40-60 bp F2-to-F1c distance that is widely quoted for
+    PrimerExplorer. They apply to the primer3 backend only.
+  weights: >
+    LAMPpy defaults, not a published ranking. Loop-independent oligos dominate
+    specificity, so 3'-anchored dimers and site conservation are weighted above
+    the thermodynamic deviations.
