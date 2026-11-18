@@ -22,11 +22,14 @@ from Eiken Chemical's PrimerExplorer V5 manual. The GC window, the hairpin and d
 and **all weights** are LAMPpy defaults that have not been traced to a primary source; their
 `sources` entries say so, and they are expected to change before 1.0.
 
-!!! note "Melting temperatures are not directly comparable to PrimerExplorer's"
-    LAMPpy computes Tm with `primer3-py` under its default salt and oligo concentrations,
-    which are not the conditions behind Eiken's windows. The deviation is therefore
-    systematic across candidates: it is fine for *ranking*, and it is not a filter — no set
-    is discarded for being outside a window.
+```{admonition} Melting temperatures are not directly comparable to PrimerExplorer's
+:class: note
+
+LAMPpy computes Tm with `primer3-py` under its default salt and oligo concentrations,
+which are not the conditions behind Eiken's windows. The deviation is therefore
+systematic across candidates: it is fine for *ranking*, and it is not a filter — no set
+is discarded for being outside a window.
+```
 
 ## Reweighting
 

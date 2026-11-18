@@ -13,7 +13,7 @@ black .          # formatting, the only formatter
 ruff check .     # linting
 mypy src         # strict type checking
 pytest           # tests, and they run on every pull request
-mkdocs build -s  # docs, strict
+sphinx-build -W -b html docs docs/_build/html  # docs, warnings as errors
 ```
 
 ## Conventions

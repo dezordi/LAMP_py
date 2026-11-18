@@ -37,8 +37,8 @@ def read_records(path: Path) -> Iterator[tuple[str, str]]:
     """Yield (identifier, sequence) per record, preserving case.
 
     Case is preserved because it carries soft-masking information. The
-    identifier is truncated at the first whitespace, matching how BLAST,
-    bowtie and GenMap report sequence names.
+    identifier is truncated at the first whitespace, matching how BLAST
+    and bowtie report sequence names.
     """
     name: str | None = None
     chunks: list[str] = []

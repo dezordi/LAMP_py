@@ -76,31 +76,73 @@ Three conventions hold across every module, and ignoring them is what produces w
 
 ## Targets
 
-::: lamppy.kmers
-::: lamppy.intervals
-::: lamppy.targets
+```{eval-rst}
+.. automodule:: lamppy.kmers
+   :members:
+
+.. automodule:: lamppy.intervals
+   :members:
+
+.. automodule:: lamppy.targets
+   :members:
+```
 
 ## Design
 
-::: lamppy.primers
-::: lamppy.profiles
-::: lamppy.native
-::: lamppy.glapd
-::: lamppy.thermo
-::: lamppy.scoring
-::: lamppy.conservation
+```{eval-rst}
+.. automodule:: lamppy.primers
+   :members:
+
+.. automodule:: lamppy.profiles
+   :members:
+
+.. automodule:: lamppy.native
+   :members:
+
+.. automodule:: lamppy.glapd
+   :members:
+
+.. automodule:: lamppy.thermo
+   :members:
+
+.. automodule:: lamppy.scoring
+   :members:
+
+.. automodule:: lamppy.conservation
+   :members:
+```
 
 ## Validation and reporting
 
-::: lamppy.blast
-::: lamppy.validation
-::: lamppy.tables
-::: lamppy.report
+```{eval-rst}
+.. automodule:: lamppy.blast
+   :members:
+
+.. automodule:: lamppy.validation
+   :members:
+
+.. automodule:: lamppy.tables
+   :members:
+
+.. automodule:: lamppy.report
+   :members:
+```
 
 ## Support
 
-::: lamppy.fasta
-::: lamppy.masking
-::: lamppy.external
-::: lamppy.manifest
-::: lamppy.pipeline
+```{eval-rst}
+.. automodule:: lamppy.fasta
+   :members:
+
+.. automodule:: lamppy.masking
+   :members:
+
+.. automodule:: lamppy.external
+   :members:
+
+.. automodule:: lamppy.manifest
+   :members:
+
+.. automodule:: lamppy.pipeline
+   :members:
+```

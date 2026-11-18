@@ -1,8 +1,4 @@
-"""Discovery and invocation of the external tools the pipeline delegates to.
-
-GenMap is probed with `--version-check 0`: its SeqAn update check forks a child
-that keeps stdout open, so capturing the output blocks.
-"""
+"""Discovery and invocation of the external tools the pipeline delegates to."""
 
 from __future__ import annotations
 
@@ -20,10 +16,8 @@ TOOLS: dict[str, tuple[str, ...] | None] = {
     "bowtie": ("--version",),
     "perl": ("--version",),
     "bowtie-build": ("--version",),
-    "genmap": ("--version", "--version-check", "0"),
     "dustmasker": ("-version",),
     "trf": None,
-    "kmc": None,
 }
 
 

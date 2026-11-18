@@ -1,0 +1,18 @@
+/* LAMPpy documentation: small tweaks on top of the RTD theme. */
+
+/* Let wide tables (output columns, CLI options) wrap instead of overflowing. */
+.wy-table-responsive table td,
+.wy-table-responsive table th {
+    white-space: normal;
+}
+
+/* Keep report screenshots inside the content column. */
+.rst-content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Slightly tighter inline code so file and column names stay readable. */
+.rst-content code.literal {
+    font-size: 0.85em;
+}

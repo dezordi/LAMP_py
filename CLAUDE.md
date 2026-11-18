@@ -16,7 +16,7 @@ uv pip install -e ".[dev,docs]" --python .venv/bin/python
 ```
 
 There is no bare `python` on `PATH`. Always invoke `.venv/bin/python`, `.venv/bin/pytest`,
-`.venv/bin/black`, `.venv/bin/ruff`, `.venv/bin/mypy`, `.venv/bin/mkdocs`.
+`.venv/bin/black`, `.venv/bin/ruff`, `.venv/bin/mypy`, `.venv/bin/sphinx-build`.
 
 ## Checks
 
@@ -27,7 +27,7 @@ All four must pass before anything is considered done:
 .venv/bin/ruff check src tests
 .venv/bin/mypy src
 .venv/bin/pytest -q
-.venv/bin/mkdocs build --strict   # when docs or docstrings changed
+.venv/bin/sphinx-build -W --keep-going -b html docs docs/_build/html   # when docs or docstrings changed
 ```
 
 ## Conventions
@@ -68,7 +68,7 @@ Command construction is a pure function returning `list[str]`; running it is
 `external.run`. That keeps the arguments testable without the tool installed. Tools resolve
 through `external.require` so a missing one gives one clear message.
 
-Not installed on this machine: `blastn`, `makeblastdb`, `bowtie`, `dustmasker`, `trf`, `kmc`.
+Not installed on this machine: `blastn`, `makeblastdb`, `bowtie`, `dustmasker`, `trf`.
 `docker build -t lamppy:test . && docker run --rm --entrypoint bash lamppy:test -lc '...'` is
 how the real tools get exercised; Docker Desktop does not share `/private/tmp`, so generate
 test data inside the container with `examples/toy_genomes.py` instead of mounting it.

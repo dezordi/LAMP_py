@@ -12,7 +12,7 @@ and screens the finished sets for background configurations that could amplify.
 
 ## Install
 
-The external tools (BLAST+, bowtie, GenMap, KMC, TRF, perl) come from bioconda, not PyPI:
+The external tools (BLAST+, bowtie, TRF, perl) come from bioconda, not PyPI:
 
 ```bash
 mamba env create -f environment.yml
@@ -86,13 +86,16 @@ validation evidence in one self-contained HTML file.
 
 ![One set in the report: description, binding-region diagram and order sheet](https://raw.githubusercontent.com/dezordi/LAMPpy/master/docs/images/report-set.png)
 
+Every section of the report is described in the
+[report documentation](https://lamppy.readthedocs.io/en/latest/report.html).
+
 Every stage writes a `<command>.manifest.json`: LAMPpy version, resolved parameters, external
 tool versions and the SHA-256 of every input.
 
 ## Documentation
 
 ```bash
-pip install -e ".[docs]" && mkdocs serve
+pip install -e ".[docs]" && sphinx-build -b html docs docs/_build/html
 ```
 
 ## Development

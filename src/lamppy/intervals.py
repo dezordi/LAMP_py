@@ -13,7 +13,7 @@ _EMPTY_FIELD = "."
 class Interval:
     """A candidate target region with the metrics the uniqueness gate needs.
 
-    Coordinates are 0-based half-open, matching BED and GenMap.
+    Coordinates are 0-based half-open, matching BED.
     """
 
     contig: str

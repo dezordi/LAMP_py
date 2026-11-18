@@ -30,9 +30,11 @@ dev = [
     "pytest-cov>=5.0",
 ]
 docs = [
-    "mkdocs-material>=9.5",
-    "mkdocs-click>=0.8",
-    "mkdocstrings[python]>=0.25",
+    "sphinx>=7.2",
+    "sphinx-rtd-theme>=2.0",
+    "myst-parser>=3.0",
+    "sphinx-copybutton>=0.5",
+    "sphinx-click>=6.0",
 ]
 
 [project.urls]

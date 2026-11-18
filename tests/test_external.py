@@ -45,7 +45,3 @@ def test_tool_version_returns_none_for_a_missing_tool():
 
 def test_tool_version_returns_none_for_a_tool_without_a_version_flag():
     assert external.tool_version("trf") is None
-
-
-def test_genmap_probe_disables_the_update_check():
-    assert external.TOOLS["genmap"] == ("--version", "--version-check", "0")

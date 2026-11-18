@@ -65,35 +65,9 @@ spells out each site as `name@position±/Nmm`.
 
 ## `report`
 
-`report.html`, one self-contained file:
-
-- a summary naming the designer (with the GLAPD commit when known), the profile and the genome;
-- what a set is: six binding regions carried by four oligos, FIP joining F1c to F2 and BIP
-  joining B1c to B2, inside one target interval, numbered by the designer;
-- how the ranking works, with the weight of every penalty component the run used;
-- the ranked sets, then for the top sets a to-scale diagram with regions coloured by the oligo
-  that carries them and an order sheet naming the regions of each oligo;
-- the validation evidence, with the thresholds it was judged by and a tally of verdicts;
-- the provenance of each stage.
-
-Hovering a column heading shows what the column means.
-
-The images below come from the [quickstart](quickstart.md) toy genomes, designed with
-`--backend primer3` and validated against `near.fasta` and `far.fasta`.
-
-The summary names the designer and the profile, then explains what a set is and how the
-ranking is computed, with the weight of every penalty component:
-
-![Report summary, set explanation and ranking weights](images/report-overview.png)
-
-Each of the top sets gets a description, a to-scale diagram whose regions are coloured by the
-oligo that carries them (FIP in blue, BIP in orange), and the order sheet:
-
-![One set: description, binding-region diagram and order sheet](images/report-set.png)
-
-The validation section states the thresholds each verdict was judged by and tallies them:
-
-![Validation thresholds, verdict tally and evidence](images/report-validation.png)
+`report.html`, one self-contained file that explains the run and gives the ranked sets, a
+diagram and an order sheet for the top sets, and the validation evidence. See
+[The report](report.md) for what each section shows.
 
 ## `<command>.manifest.json`
 

@@ -1,10 +1,13 @@
 # Limitations and wet-lab validation
 
-!!! danger "Required reading"
-    LAMPpy outputs **candidate** assays. Bioinformatic prediction is not a sufficient
-    predictor of specificity or efficiency. Wet-lab validation — inclusivity panel,
-    exclusivity panel, limit of detection, and no-template controls — is required before any
-    diagnostic use.
+```{admonition} Required reading
+:class: danger
+
+LAMPpy outputs **candidate** assays. Bioinformatic prediction is not a sufficient
+predictor of specificity or efficiency. Wet-lab validation — inclusivity panel,
+exclusivity panel, limit of detection, and no-template controls — is required before any
+diagnostic use.
+```
 
 ## Known limits of the method
 

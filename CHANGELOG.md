@@ -6,6 +6,21 @@ All notable changes to LAMPpy are recorded here, following
 
 ## [Unreleased]
 
+## [1.0.0b2] - 2026-11-18
+
+### Removed
+
+- GenMap and KMC from `lamppy check-deps` and `environment.yml`: no stage runs either tool.
+
+### Changed
+
+- Documentation moved from MkDocs to Sphinx with the Read the Docs theme and MyST Markdown,
+  with a page of its own for the report and a citation table for every tool a run uses.
+
+### Fixed
+
+- `CITATION.cff` gave the Primer3 paper a wrong title.
+
 ## [1.0.0b1] - 2026-11-18
 
 ### Added
@@ -63,5 +78,6 @@ All notable changes to LAMPpy are recorded here, following
   producing candidates for one stage only.
 - Inputs are never modified and never concatenated across assembly gaps.
 
-[Unreleased]: https://github.com/dezordi/LAMPpy/compare/v1.0.0b1...HEAD
+[Unreleased]: https://github.com/dezordi/LAMPpy/compare/v1.0.0b2...HEAD
+[1.0.0b2]: https://github.com/dezordi/LAMPpy/compare/v1.0.0b1...v1.0.0b2
 [1.0.0b1]: https://github.com/dezordi/LAMPpy/releases/tag/v1.0.0b1

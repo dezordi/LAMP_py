@@ -14,6 +14,14 @@ keywords:
   - molecular diagnostics
 references:
   - type: article
+    title: "Loop-mediated isothermal amplification of DNA"
+    authors:
+      - family-names: Notomi
+        given-names: Tsugunori
+    journal: "Nucleic Acids Research"
+    year: 2000
+    doi: 10.1093/nar/28.12.e63
+  - type: article
     title: "GLAPD: Whole Genome Based LAMP Primer Design for a Set of Target Genomes"
     authors:
       - family-names: Jia
@@ -22,10 +30,50 @@ references:
     year: 2019
     doi: 10.3389/fmicb.2019.02860
   - type: article
-    title: "Primer3-py: a Python interface to Primer3"
+    title: "Ultrafast and memory-efficient alignment of short DNA sequences to the human genome"
+    authors:
+      - family-names: Langmead
+        given-names: Ben
+    journal: "Genome Biology"
+    year: 2009
+    doi: 10.1186/gb-2009-10-3-r25
+  - type: article
+    title: "Primer3: new capabilities and interfaces"
     authors:
       - family-names: Untergasser
         given-names: Andreas
     journal: "Nucleic Acids Research"
     year: 2012
     doi: 10.1093/nar/gks596
+  - type: article
+    title: "Basic local alignment search tool"
+    authors:
+      - family-names: Altschul
+        given-names: Stephen F.
+    journal: "Journal of Molecular Biology"
+    year: 1990
+    doi: 10.1016/S0022-2836(05)80360-2
+  - type: article
+    title: "BLAST+: architecture and applications"
+    authors:
+      - family-names: Camacho
+        given-names: Christiam
+    journal: "BMC Bioinformatics"
+    year: 2009
+    doi: 10.1186/1471-2105-10-421
+  - type: article
+    title: "A fast and symmetric DUST implementation to mask low-complexity DNA sequences"
+    authors:
+      - family-names: Morgulis
+        given-names: Aleksandr
+    journal: "Journal of Computational Biology"
+    year: 2006
+    doi: 10.1089/cmb.2006.13.1028
+  - type: article
+    title: "Tandem repeats finder: a program to analyze DNA sequences"
+    authors:
+      - family-names: Benson
+        given-names: Gary
+    journal: "Nucleic Acids Research"
+    year: 1999
+    doi: 10.1093/nar/27.2.573

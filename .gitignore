@@ -10,7 +10,7 @@ build/
 *.egg-info/
 
 .DS_Store
-site/
+docs/_build/
 
 PROPOSAL.md
 work/
