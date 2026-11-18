@@ -6,7 +6,7 @@ authors:
   - family-names: Dezordi
     given-names: Filipe
 license: MIT
-repository-code: "https://github.com/dezordi/LAMP_py"
+repository-code: "https://github.com/dezordi/LAMPpy"
 keywords:
   - LAMP
   - primer design

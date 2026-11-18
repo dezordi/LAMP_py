@@ -1,6 +1,6 @@
 site_name: LAMPpy
 site_description: Genome-scale design of group-specific LAMP primer sets
-repo_url: https://github.com/dezordi/LAMP_py
+repo_url: https://github.com/dezordi/LAMPpy
 docs_dir: docs
 theme:
   name: material

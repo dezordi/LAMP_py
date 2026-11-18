@@ -84,6 +84,8 @@ amplification requires. It works on sets LAMPpy never designed.
 it is ranked, then gives the ranked sets, a to-scale site diagram, an order sheet and the
 validation evidence in one self-contained HTML file.
 
+![One set in the report: description, binding-region diagram and order sheet](docs/images/report-set.png)
+
 Every stage writes a `<command>.manifest.json`: LAMPpy version, resolved parameters, external
 tool versions and the SHA-256 of every input.
 

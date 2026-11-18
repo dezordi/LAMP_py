@@ -36,10 +36,10 @@ docs = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/dezordi/LAMP_py"
+Homepage = "https://github.com/dezordi/LAMPpy"
 Documentation = "https://lamppy.readthedocs.io"
-Changelog = "https://github.com/dezordi/LAMP_py/blob/master/CHANGELOG.md"
-Issues = "https://github.com/dezordi/LAMP_py/issues"
+Changelog = "https://github.com/dezordi/LAMPpy/blob/master/CHANGELOG.md"
+Issues = "https://github.com/dezordi/LAMPpy/issues"
 
 [project.scripts]
 lamppy = "lamppy.cli:main"

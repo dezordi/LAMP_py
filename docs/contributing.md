@@ -1,7 +1,7 @@
 # Contributing
 
 ```bash
-git clone https://github.com/dezordi/LAMP_py && cd LAMP_py
+git clone https://github.com/dezordi/LAMPpy && cd LAMPpy
 pip install -e ".[dev,docs]"
 pytest
 ```

@@ -78,6 +78,23 @@ spells out each site as `name@position±/Nmm`.
 
 Hovering a column heading shows what the column means.
 
+The images below come from the [quickstart](quickstart.md) toy genomes, designed with
+`--backend primer3` and validated against `near.fasta` and `far.fasta`.
+
+The summary names the designer and the profile, then explains what a set is and how the
+ranking is computed, with the weight of every penalty component:
+
+![Report summary, set explanation and ranking weights](images/report-overview.png)
+
+Each of the top sets gets a description, a to-scale diagram whose regions are coloured by the
+oligo that carries them (FIP in blue, BIP in orange), and the order sheet:
+
+![One set: description, binding-region diagram and order sheet](images/report-set.png)
+
+The validation section states the thresholds each verdict was judged by and tallies them:
+
+![Validation thresholds, verdict tally and evidence](images/report-validation.png)
+
 ## `<command>.manifest.json`
 
 Written by every stage, one file each (`design.manifest.json`, `validate.manifest.json`,
